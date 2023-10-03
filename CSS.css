@@ -1,0 +1,85 @@
+@charset "UTF-08";
+
+* {
+    margin: 0;
+    overflow: hidden;
+}
+
+main {
+    min-width: 80vw;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+div#calculadora {
+    display: flex;
+    width:400px;
+    height: 600px;
+    background-color: rgb(58, 58, 58);
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    margin-top: 50px;
+}
+
+.button {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.371);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 90px;
+    margin: 10px;
+}
+
+.button-igual {
+    width: 90%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.489);
+    color: white;
+    border-radius: 20px;
+}
+
+
+input#resultado {
+    width: 90%;
+    height: 20px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.334);
+    text-align: right;
+    padding: 20px;
+}
+
+input#deletar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.742);
+    border-radius: 90px;
+    color: white;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.igual {
+    width: 80px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    position: absolute;
+}

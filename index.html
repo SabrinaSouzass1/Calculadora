@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    
+<main>
+
+
+    <input type="button" value="<" id="deletar" onclick="apagarUltimo()">
+
+
+<div id="calculadora">
+
+    <input type="text" name="resultado" id="resultado">
+
+    <br>
+
+    <input type="button" value="+" class="button" onclick="adicionar('+')">
+    <input type="button" value="9" class="button" onclick="adicionar('9')">
+    <input type="button" value="8" class="button" onclick="adicionar('8')">
+    <input type="button" value="7" class="button" onclick="adicionar('7')">
+    <input type="button" value="-" class="button" onclick="adicionar('-')">
+
+    <br>
+
+    <input type="button" value="6" class="button" onclick="adicionar('6')">
+    <input type="button" value="5" class="button" onclick="adicionar('5')">
+    <input type="button" value="4" class="button" onclick="adicionar('4')">
+    <input type="button" value="*" class="button" onclick="adicionar('*')">
+
+    <br>
+
+    <input type="button" value="3" class="button" onclick="adicionar('3')">
+    <input type="button" value="2" class="button" onclick="adicionar('2')">
+    <input type="button" value="1" class="button" onclick="adicionar('1')">
+    <input type="button" value="/" class="button" onclick="adicionar('/')">
+    <input type="button" value="•" class="button" onclick="adicionar('.')">
+    <input type="button" value="0" class="button" onclick="adicionar('0')">
+
+    <br>
+
+    <input type="button" value="C" class="button" onclick="limpar()">
+
+    <br>
+
+    <input type="button" value="=" class="button-igual" onclick="calcular()">
+
+
+
+
+</div>
+
+</main>
+
+
+</body>
+</html>
+
+<script>
+
+    let expressao = "";
+
+    function adicionar(valor) {
+        expressao += valor;
+        document.getElementById("resultado").value = expressao;
+    }
+
+    function limpar() {
+        expressao = "";
+        document.getElementById("resultado").value = "";
+    }
+
+    function calcular() {
+            try {
+                const resultado = eval(expressao);
+                document.getElementById("resultado").value = resultado;
+                expressao = resultado.toString();
+            } catch (error) {
+                document.getElementById("resultado").value = "Erro";
+            }
+        }
+
+    function apagarUltimo() {
+        expressao = expressao.slice(0, -1);
+        document.getElementById("resultado").value = expressao;
+}
+
+</script>
